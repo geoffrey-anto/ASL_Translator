@@ -11,8 +11,6 @@ const ConverterScreen = () => {
 
   const [model, setModel] = useState(undefined);
 
-  const [canPredict, setCanPredict] = useState(false);
-
   //Gets the video everytime the previous frame changes therefore an infinite loop
   useEffect(() => {
     getVideo();
@@ -48,8 +46,6 @@ const ConverterScreen = () => {
     }
 
     loadModelASL().then(() => {
-
-      setCanPredict(true);
 
       console.log("Loaded Model");
 
@@ -116,7 +112,7 @@ const ConverterScreen = () => {
 
         <button className="PhotoScreen-button" onClick={predictAnswer}>Start</button>
 
-        <button className="PhotoScreen-button" onClick={() => { setCurrPred(""); setCanPredict(false); }}>Clear</button>
+        <button className="PhotoScreen-button" onClick={() => { setCurrPred(""); }}>Clear</button>
 
       </div>
 
