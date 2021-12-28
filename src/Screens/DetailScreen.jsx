@@ -16,7 +16,7 @@ const DetailScreen = () => {
 
             <div className="DetailScreen-Text">American Sign Language (ASL) is a complete, natural language that has the same linguistic properties as spoken languages, with grammar that differs from English. ASL is expressed by movements of the hands and face. It is the primary language of many North Americans who are deaf and hard of hearing and is used by some hearing people as well.</div>
 
-            <div className="DetailScreen-Image-Container">{DATA.map((data) => { return <Card url={require("../../src/ASL_DEMO_IMAGES/" + data.imgUrl)} key={data.imgName} title={data.imgName} /> })}</div>
+            <div className="DetailScreen-Image-Container">{DATA.map((data) => { return <Card urlmagesRef_Card={require("../../src/ASL_DEMO_IMAGES/" + data.imgUrl)} key={data.imgName} title_Card={data.imgName} /> })}</div>
 
             <div className="DetailScreen-Text">With this webapp you will be able to convert your ASL language alphabets to English alphabets using a Deep Learning Algorithm and Convolutional Neural Networks</div>
 
