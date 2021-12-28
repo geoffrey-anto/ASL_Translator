@@ -24,3 +24,12 @@
     justify-content: center;
     font-size: 18px;
 }
+
+.PhotoScreen-button{
+    height: 10vh;
+    min-height: 50px;
+    width: 20vw;
+    background-color: rgb(251, 228, 198);
+    border-radius: 10px;
+    border: 2px solid black;
+}

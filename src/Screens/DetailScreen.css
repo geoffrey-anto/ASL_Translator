@@ -18,6 +18,7 @@
 
 .DetailScreen-Image-Container{
     padding: 20px;
+    /* padding-left: 0px; */
     width: 90%;
     height: 20%;
     display: flex;
