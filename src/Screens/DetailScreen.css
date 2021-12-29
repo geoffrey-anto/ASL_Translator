@@ -1,26 +1,26 @@
 .DetailScreen-Container{
     width: 100vw;
     height: 100vh;
-    padding: 0px;
-    margin: 0px;
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;    
     justify-content: flex-start;
-    background-color: #faf5dd;
+    background-color: #151c38;
+    /* 111a3d */
 }
 
 .DetailScreen-Header{
-    padding: 20px;
     font: 40px "Fira Sans";
     font-weight: 500;
+    padding-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px white;
 }
 
 .DetailScreen-Image-Container{
-    padding: 20px;
-    /* padding-left: 0px; */
     width: 90%;
-    height: 20%;
+    height: 25%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,25 +31,62 @@
     width: 0px;
 }
 
-.DetailScreen-Start{
-    margin-top: 20vh;
+.DetailScreen-Start {
     height: 10vh;
-    min-height: 50px;
     width: 20vw;
-    background-color: rgb(251, 228, 198);
-    border-radius: 10px;
-    border: 2px solid black;
-}
+    background-image: linear-gradient(to right, #eeeeee, #c3bea2); 
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 10vh;
+  }
+  
+  .DetailScreen-Start span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .DetailScreen-Start span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .DetailScreen-Start:hover span {
+    padding-right: 25px;
+  }
+  
+  .DetailScreen-Start:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 .DetailScreen-Text{
-    padding: 20px;
+    padding-bottom: 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 1px white;
 }
 
 .DetailScreen-Text-heading{
-    margin-top: 1vh;
     font-weight: bold;
+    text-align: center;
     font-size: 26px;
+    padding-bottom: 20px;
     font-family: "Fira Sans";
+    color: white;
+    text-shadow: 1px 1px 1px white;
 }

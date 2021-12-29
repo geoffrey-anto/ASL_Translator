@@ -20,7 +20,7 @@ const DetailScreen = () => {
 
             <div className="DetailScreen-Text">With this webapp you will be able to convert your ASL language alphabets to English alphabets using a Deep Learning Algorithm and Convolutional Neural Networks</div>
 
-            <Link to="/Convert"><button className="DetailScreen-Start" >Start Writing</button></Link>
+            <Link to="/Convert"><button className="DetailScreen-Start" ><span>Start Writing  </span></button></Link>
             
         </div>
     )

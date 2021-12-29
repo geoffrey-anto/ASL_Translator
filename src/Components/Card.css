@@ -7,11 +7,12 @@
     justify-content: center;
 }
 .Card-image{
-    width: 60px;
-    height: 60px;
+    width: 9vw;
+    height: 18vh;
 }
 
 .Card-Title{
     font: 20px "Fira Sans";
     font-weight: 600;
+    color: white;
 }

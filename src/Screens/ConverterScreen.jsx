@@ -11,7 +11,19 @@ const ConverterScreen = () => {
 
   const [model, setModel] = useState(undefined);
 
-  //Gets the video everytime the previous frame changes therefore an infinite loop
+  const [loaded, setLoaded] = useState(false);
+
+  const [displayMsg,setDisplayMsg] = useState(false);
+
+  useEffect(() => {
+    if(loaded) {
+      setDisplayMsg("Loaded The Model!");
+    } else {
+      setDisplayMsg("Loading The Model...");
+    }
+  },[loaded])
+
+  //Gets the video everytime the frame changes therefore an infinite loop
   useEffect(() => {
     getVideo();
   }, [videoRef]);
@@ -49,6 +61,8 @@ const ConverterScreen = () => {
 
       console.log("Loaded Model");
 
+      setLoaded(true);
+
     })
       .catch(err => { console.error("error:", err) });
 
@@ -74,7 +88,7 @@ const ConverterScreen = () => {
 
     cam.capture().then((img) => {
 
-      //Pre Process The Image Fron Camera Feed
+      //Pre Process The Image From Camera Feed
       let pixelSize = tf.scalar(255);
       img = img.div(pixelSize);
       img = tf.expandDims(img, 0)
@@ -102,13 +116,20 @@ const ConverterScreen = () => {
       });
   }
 
+  // useEffect(() => {
+  //   setInterval(function () {predictAnswer()}, 1000);
+  // },[])
+
+
   return (
 
     <div className="PhotoScreen-Main-Container">
 
       <video className="PhotoScreen-video" ref={videoRef} />
 
-      <div>
+      <div className="PhotoScreen_text_yay">{displayMsg}</div>
+
+      <div className="PhotoScreen_button_container">
 
         <button className="PhotoScreen-button" onClick={predictAnswer}>Start</button>
 

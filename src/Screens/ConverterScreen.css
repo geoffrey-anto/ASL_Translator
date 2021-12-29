@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #faf5dd;
+    background-color: #151c38;
 }
 
 .PhotoScreen-video{
@@ -16,20 +16,59 @@
 .PhotoScreen-Output{
     height: 20vh;
     width: 80vw;
-    border: 1px solid black;
+    border: 1px solid rgb(245, 243, 231);
     border-radius: 15px;
     display: flex;
     text-align: center;
+    color: white;
     align-items: center;
     justify-content: center;
     font-size: 18px;
 }
 
-.PhotoScreen-button{
-    height: 10vh;
-    min-height: 50px;
-    width: 20vw;
-    background-color: rgb(251, 228, 198);
-    border-radius: 10px;
-    border: 2px solid black;
+.PhotoScreen_text_yay{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
+
+
+.PhotoScreen_button_container{
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PhotoScreen-button {
+    display: inline-block;
+    padding: 15px 25px;
+    width: 8vw;
+    height: 8vh;
+    /* min-width: 100px;
+    min-height: 70px; */
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right, #eeeeee, #c3bea2); 
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(73, 73, 69);
+  }
+  
+  .PhotoScreen-button:hover {    background-image: linear-gradient(to right, #e4ddb7, #c3bea2); 
+  }
+  
+  .PhotoScreen-button:active {
+    background-image: linear-gradient(to right, #c3bea2, #c3bea2); 
+    box-shadow: 0 5px rgb(87, 88, 70);
+    transform: translateY(4px);
+  }
