@@ -1,6 +1,6 @@
 import React from 'react';
-import DetailScreen from "./Screens/DetailScreen";
 import "./App.css"
+import DetailScreen from "./Screens/DetailScreen";
 import ConverterScreen from './Screens/ConverterScreen';
 
 import {

@@ -4,10 +4,15 @@ import "./Card.css"
 const Card = (props) => {
     return (
         <div className="Card-Container">
-            <img className="Card-image" src={props.urlmagesRef_Card} alt='' width="100px"/>
+
+            <img className="Card-image" src={props.urlmagesRef_Card} alt='' width="100px" />
+            
+            <br></br>
+
             <span className="Card-Title">{props.title_Card}</span>
+            
         </div>
     )
 }
 
-export default Card
+export default Card;

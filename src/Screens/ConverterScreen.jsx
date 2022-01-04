@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as tf from '@tensorflow/tfjs';
-import Classes from "../Data/Classes_Mapping"
 import "./ConverterScreen.css"
+import Classes from "../Data/Classes_Mapping"
 
 const ConverterScreen = () => {
 
@@ -34,7 +34,7 @@ const ConverterScreen = () => {
   const getVideo = () => {
 
     navigator.mediaDevices
-      .getUserMedia({ video: { width: 300, height: 300 } })
+      .getUserMedia({ video: { width: 400, height: 400 } })
       .then(stream => {
         let video = videoRef.current;
         video.srcObject = stream;
@@ -67,8 +67,6 @@ const ConverterScreen = () => {
       .catch(err => { console.error("error:", err) });
 
   }, [])
-
-  
 
   //To get image from camera feed and convert it to tensor format
   //With the tensor make prediction and make apropriate changes
@@ -119,7 +117,6 @@ const ConverterScreen = () => {
   // useEffect(() => {
   //   setInterval(function () {predictAnswer()}, 1000);
   // },[])
-
 
   return (
 

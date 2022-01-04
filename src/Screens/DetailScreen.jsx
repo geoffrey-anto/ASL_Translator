@@ -5,12 +5,12 @@ import Card from '../Components/Card'
 import { Link } from 'react-router-dom'
 
 const DetailScreen = () => {
-    
 
     return (
+
         <div className="DetailScreen-Container">
 
-            <div className="DetailScreen-Header">ASL CONVERTER</div>
+            <div className="DetailScreen-Header">ASL Translator</div>
 
             <div className="DetailScreen-Text-heading">What is American Sign Language?</div>
 
@@ -18,11 +18,12 @@ const DetailScreen = () => {
 
             <div className="DetailScreen-Image-Container">{DATA.map((data) => { return <Card urlmagesRef_Card={require("../../src/ASL_DEMO_IMAGES/" + data.imgUrl)} key={data.imgName} title_Card={data.imgName} /> })}</div>
 
-            <div className="DetailScreen-Text">With this webapp you will be able to convert your ASL language alphabets to English alphabets using a Deep Learning Algorithm and Convolutional Neural Networks</div>
+            <div className="DetailScreen-Text">With this webapp you will be able to translate your ASL language alphabets to English alphabets using a Deep Learning Algorithm and Convolutional Neural Networks</div>
 
             <Link to="/Convert"><button className="DetailScreen-Start" ><span>Start Writing  </span></button></Link>
             
         </div>
+        
     )
 }
 
