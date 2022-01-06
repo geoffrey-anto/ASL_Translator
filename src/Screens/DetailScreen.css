@@ -1,5 +1,5 @@
 .DetailScreen-Container{
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
     padding-top: 25px;
     display: flex;
@@ -7,6 +7,8 @@
     align-items: center;    
     justify-content: flex-start;
     background-color: #151c38;
+    padding-left: 1vw;
+    padding-right: 1vw;
     /* 111a3d */
 }
 

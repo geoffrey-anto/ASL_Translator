@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as tf from '@tensorflow/tfjs';
 import "./ConverterScreen.css"
 import Classes from "../Data/Classes_Mapping"
+import DATA from '../Data/ASL_EXPLAIN_DATA'
+import Card from '../Components/Card'
 
 const ConverterScreen = () => {
 
@@ -13,15 +15,15 @@ const ConverterScreen = () => {
 
   const [loaded, setLoaded] = useState(false);
 
-  const [displayMsg,setDisplayMsg] = useState(false);
+  const [displayMsg, setDisplayMsg] = useState(false);
 
   useEffect(() => {
-    if(loaded) {
+    if (loaded) {
       setDisplayMsg("Loaded The Model!");
     } else {
       setDisplayMsg("Loading The Model...");
     }
-  },[loaded])
+  }, [loaded])
 
   //Gets the video everytime the frame changes therefore an infinite loop
   useEffect(() => {
@@ -122,7 +124,19 @@ const ConverterScreen = () => {
 
     <div className="PhotoScreen-Main-Container">
 
-      <video className="PhotoScreen-video" ref={videoRef} />
+      <div className="PhotoScreen-VideoAndInfoContainer">
+
+        <video className="PhotoScreen-video" ref={videoRef} />
+
+        <div className="PhotoScreen-Image_Container">{DATA.map((data) => {
+          return <Card
+            urlmagesRef_Card={require("../../src/ASL_DEMO_IMAGES/" + data.imgUrl)}
+            key={data.imgName}
+            title_Card={data.imgName} />
+        })}
+        </div>
+
+      </div>
 
       <div className="PhotoScreen_text_yay">{displayMsg}</div>
 
