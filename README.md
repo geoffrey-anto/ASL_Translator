@@ -66,3 +66,7 @@ Now that we have a basic idea of what machine learning is let us see machine lea
 *   This Notebook is Trained using the ASL Dataset from Kaggle
 *   https://www.kaggle.com/grassknoted/asl-alphabet
 *   Each Class Contains 3000 Photos of each Alphabet
+
+![image](https://user-images.githubusercontent.com/91791834/176954355-9cc440a2-cacf-48b3-be34-9eee3db30b7d.png)
+
+![Output#](https://user-images.githubusercontent.com/91791834/176954542-2427de5f-643d-4d99-adab-d7025ca32bec.png)
